@@ -102,7 +102,7 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
         bleConnectAdatpter.setBleItemOnclick(this);
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
-        mTitleTextView.setText("扫描设备 V" + getAppVersion(mContext));
+        mTitleTextView.setText("Scanning equipments V" + getAppVersion(mContext));
     }
 
 
@@ -178,7 +178,7 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
         }
 
         if (!BluetoothUtils.isBluetoothEnabled()) {
-            Toast.makeText(mContext, "蓝牙没有开启", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "Bluetooth is not turned on", Toast.LENGTH_SHORT).show();
             return true;
         }
         mVpoperateManager.startScanDevice(mSearchResponse);
@@ -358,7 +358,7 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(mContext, "正在连接，请稍等...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Connecting, please wait ...", Toast.LENGTH_SHORT).show();
             }
         });
         SearchResult searchResult = mListData.get(position);
